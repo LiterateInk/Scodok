@@ -1,0 +1,36 @@
+{
+  "name": "scodok",
+  "version": "0.0.19",
+  "description": "A simple API wrapper for ScoDoc Notes.",
+  "repository": "https://github.com/LiterateInk/ExperimentalScodok",
+  "sideEffects": false,
+  "main": "./js/index.js",
+  "types": "./js/index.d.ts",
+  "exports": {
+    "types": "./js/index.d.ts",
+    "default": "./js/index.js"
+  },
+  "files": [
+    "js"
+  ],
+  "keywords": [
+    "scodoc",
+    "notes",
+    "grading",
+    "wrapper",
+    "api"
+  ],
+  "author": "LiterateInk <contact@literate.ink> (https://literate.ink)",
+  "homepage": "https://docs.literate.ink/scodok",
+  "bugs": {
+    "url": "https://github.com/LiterateInk/Scodok/issues"
+  },
+  "license": "GPL-3.0-or-later",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@literate.ink/utilities": "1.0.0-12527373786.1",
+    "@scure/base": "^1.2.1"
+  }
+}

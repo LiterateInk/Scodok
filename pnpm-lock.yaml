@@ -1,0 +1,33 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@literate.ink/utilities':
+        specifier: 1.0.0-12527373786.1
+        version: 1.0.0-12527373786.1
+      '@scure/base':
+        specifier: ^1.2.1
+        version: 1.2.1
+      js:
+        specifier: link:../../js
+        version: link:../../js
+
+packages:
+
+  '@literate.ink/utilities@1.0.0-12527373786.1':
+    resolution: {integrity: sha512-K1qRNC5j1vR1ZL4OojnRYJ1ReNO964kE788XVCmWs+qYrqj5bTmCMOc8bm6IIGNVa3q+cfbed9sLIa5h18l2FA==}
+
+  '@scure/base@1.2.1':
+    resolution: {integrity: sha512-DGmGtC8Tt63J5GfHgfl5CuAXh96VF/LD8K9Hr/Gv0J2lAoRGlPOMpqMpMbCTOoOJMZCk2Xt+DskdDyn6dEFdzQ==}
+
+snapshots:
+
+  '@literate.ink/utilities@1.0.0-12527373786.1': {}
+
+  '@scure/base@1.2.1': {}

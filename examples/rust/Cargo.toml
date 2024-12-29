@@ -1,0 +1,9 @@
+[package]
+name = "scodok-examples"
+version = "0.0.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+scodok = { path = "../.." }
+anyhow = "1.0"

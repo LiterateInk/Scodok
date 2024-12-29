@@ -8,7 +8,7 @@ mod error;
 pub use error::Error;
 
 mod cas;
-pub use cas::retrieve_cas_url;
+pub use cas::{retrieve_cas_url, process_cas_ticket};
 
 mod session;
 pub use session::Session;

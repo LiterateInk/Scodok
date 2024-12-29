@@ -10,8 +10,8 @@ use crate::Session;
 #[cfg_attr(feature = "ffi", uniffi::export)]
 #[cfg_attr(target_arch = "wasm32", wasm::api_method(retrieveCasUrl))]
 pub async fn retrieve_cas_url (session: &Session) -> Result<String, crate::Error> {
-  let base = Url::parse(&session.instance_url()).unwrap();
-  let url = base.join("/services/doAuth.php").unwrap();
+  let mut url = Url::parse(&session.instance_url()).unwrap();
+  url.set_path("/services/doAuth.php");
 
   let request = Request {
     url,
@@ -26,4 +26,37 @@ pub async fn retrieve_cas_url (session: &Session) -> Result<String, crate::Error
   let location = headers.get("location").ok_or(crate::Error::InvalidRedirection())?;
 
   Ok(location.to_str().unwrap().into())
+}
+
+#[cfg_attr(feature = "ffi", uniffi::export)]
+#[cfg_attr(target_arch = "wasm32", wasm::api_method(processCasTicket))]
+pub async fn process_cas_ticket (session: &Session, ticket: &str) -> Result<Session, crate::Error> {
+  let instance_url = session.instance_url();
+
+  let mut url = Url::parse(&instance_url).unwrap();
+  url.set_path("/services/doAuth.php");
+  url.query_pairs_mut().clear()
+    .append_pair("href", &instance_url)
+    .append_pair("ticket", ticket);
+
+  let request = Request {
+    url,
+    method: Method::GET,
+    headers: Default::default(),
+    follow: Some(false),
+    body: None,
+  };
+
+  let response = fetch!(request);
+
+  if response.status != 302 {
+    return Err(crate::Error::InvalidCasTicket());
+  }
+
+  let headers = response.headers();
+  let set_cookie = headers.get("set-cookie").ok_or(crate::Error::InvalidCasTicket())?;
+  let cookie = set_cookie.to_str().unwrap().split(';').next().unwrap();
+  let php_sessid = cookie.split('=').last().unwrap();
+
+  Ok(Session::new(&instance_url, Some(php_sessid.into())))
 }

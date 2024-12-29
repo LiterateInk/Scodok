@@ -6,4 +6,6 @@ use thiserror::Error;
 pub enum Error {
   #[error("no redirection was made, make sure the instance URL is correct")]
   InvalidRedirection(),
+  #[error("the given cas ticket is invalid")]
+  InvalidCasTicket(),
 }

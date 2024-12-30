@@ -8,9 +8,9 @@ use crate::Session;
 /// After this, you can call the [`process_cas_ticket`] function to
 /// authenticate in Scodoc Notes.
 #[cfg_attr(feature = "ffi", uniffi::export)]
-#[cfg_attr(target_arch = "wasm32", wasm::api_method(retrieveCasUrl))]
-pub async fn retrieve_cas_url (session: &Session) -> Result<String, crate::Error> {
-  let mut url = Url::parse(&session.instance_url()).unwrap();
+#[cfg_attr(target_arch = "wasm32", wasm::append_fetcher, wasm::export)]
+pub async fn retrieve_cas_url (instance_url: &str) -> Result<String, crate::Error> {
+  let mut url = Url::parse(instance_url).unwrap();
   url.set_path("/services/doAuth.php");
 
   let request = Request {
@@ -29,14 +29,12 @@ pub async fn retrieve_cas_url (session: &Session) -> Result<String, crate::Error
 }
 
 #[cfg_attr(feature = "ffi", uniffi::export)]
-#[cfg_attr(target_arch = "wasm32", wasm::api_method(processCasTicket))]
-pub async fn process_cas_ticket (session: &Session, ticket: &str) -> Result<Session, crate::Error> {
-  let instance_url = session.instance_url();
-
-  let mut url = Url::parse(&instance_url).unwrap();
+#[cfg_attr(target_arch = "wasm32", wasm::append_fetcher, wasm::export)]
+pub async fn process_cas_ticket (instance_url: &str, ticket: &str) -> Result<Session, crate::Error> {
+  let mut url = Url::parse(instance_url).unwrap();
   url.set_path("/services/doAuth.php");
   url.query_pairs_mut().clear()
-    .append_pair("href", &instance_url)
+    .append_pair("href", instance_url)
     .append_pair("ticket", ticket);
 
   let request = Request {
@@ -58,5 +56,5 @@ pub async fn process_cas_ticket (session: &Session, ticket: &str) -> Result<Sess
   let cookie = set_cookie.to_str().unwrap().split(';').next().unwrap();
   let php_sessid = cookie.split('=').last().unwrap();
 
-  Ok(Session::new(&instance_url, Some(php_sessid.into())))
+  Ok(Session::new(instance_url, php_sessid))
 }

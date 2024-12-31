@@ -14,7 +14,10 @@ mod token;
 pub use token::get_session_from_token;
 
 mod data;
-pub use data::get_profile_picture_bytes;
+pub use data::{get_profile_picture_bytes, get_user_status};
 
 mod session;
 pub use session::Session;
+
+mod definitions;
+pub use definitions::UserStatus;

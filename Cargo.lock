@@ -304,7 +304,7 @@ checksum = "37909eebbb50d72f9059c3b6d82c0463f2ff062c9e95845c43a6c9c0355411be"
 [[package]]
 name = "fetcher"
 version = "0.1.0"
-source = "git+https://github.com/LiterateInk/Utilities?branch=main#5a04803e04a2d2383d4eb778b67db9f6ec5c40bc"
+source = "git+https://github.com/LiterateInk/Utilities#5a04803e04a2d2383d4eb778b67db9f6ec5c40bc"
 dependencies = [
  "fetcher-macros",
  "http",
@@ -321,7 +321,7 @@ dependencies = [
 [[package]]
 name = "fetcher-macros"
 version = "0.1.0"
-source = "git+https://github.com/LiterateInk/Utilities?branch=main#5a04803e04a2d2383d4eb778b67db9f6ec5c40bc"
+source = "git+https://github.com/LiterateInk/Utilities#5a04803e04a2d2383d4eb778b67db9f6ec5c40bc"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1728,7 +1728,7 @@ checksum = "e421abadd41a4225275504ea4d6566923418b7f05506fbc9c0fe86ba7396114b"
 [[package]]
 name = "tsify-next"
 version = "0.5.4"
-source = "git+https://github.com/siefkenj/tsify?branch=main#39acd099a3a7d1fffee3d466f1911ad0fd14a6ec"
+source = "git+https://github.com/siefkenj/tsify#39acd099a3a7d1fffee3d466f1911ad0fd14a6ec"
 dependencies = [
  "gloo-utils",
  "serde",
@@ -1740,7 +1740,7 @@ dependencies = [
 [[package]]
 name = "tsify-next-macros"
 version = "0.5.4"
-source = "git+https://github.com/siefkenj/tsify?branch=main#39acd099a3a7d1fffee3d466f1911ad0fd14a6ec"
+source = "git+https://github.com/siefkenj/tsify#39acd099a3a7d1fffee3d466f1911ad0fd14a6ec"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1932,7 +1932,7 @@ checksum = "9c8d87e72b64a3b4db28d11ce29237c246188f4f51057d65a7eab63b7987e423"
 [[package]]
 name = "wasm"
 version = "0.1.0"
-source = "git+https://github.com/LiterateInk/Utilities?branch=main#5a04803e04a2d2383d4eb778b67db9f6ec5c40bc"
+source = "git+https://github.com/LiterateInk/Utilities#5a04803e04a2d2383d4eb778b67db9f6ec5c40bc"
 dependencies = [
  "convert_case",
  "proc-macro2",

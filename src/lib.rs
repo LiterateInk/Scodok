@@ -1,6 +1,3 @@
-#[cfg(target_arch = "wasm32")]
-wasm::setup_allocator!();
-
 #[cfg(feature = "ffi")]
 uniffi::setup_scaffolding!();
 

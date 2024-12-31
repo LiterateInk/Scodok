@@ -807,9 +807,9 @@ checksum = "4ee93343901ab17bd981295f2cf0026d4ad018c7c31ba84549a4ddbb47a45104"
 
 [[package]]
 name = "literateink-fetcher"
-version = "0.1.1"
+version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "88bb5bebbb5853e954287d52569652f8b2e50713ebe5882c10dcf107b0a9598b"
+checksum = "b46b1834457c1fefa2fddaa7d2aafebbe9e97f57ed22219048a749bda4a1bbfa"
 dependencies = [
  "http",
  "js-sys",
@@ -825,9 +825,9 @@ dependencies = [
 
 [[package]]
 name = "literateink-fetcher-macros"
-version = "0.1.1"
+version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5b43cfe3190f8059ef63a58b0977c0e7c76611b0a4a264905123baa692cd93f6"
+checksum = "f4973e376c1d7c59a10665aa580e77487ab109846cad01c396eb4877eaa8a541"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -836,9 +836,9 @@ dependencies = [
 
 [[package]]
 name = "literateink-wasm"
-version = "0.1.1"
+version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "945deb72eaa6dcf90d04e603e45150cd0b9d7ef5a039badfd8ddba49376d8894"
+checksum = "0da8a6c2c487512e63181d7bc8c261d5efa0c82d9ff3e5edfe9287dcc0d6f74b"
 dependencies = [
  "convert_case",
  "proc-macro2",
@@ -1222,7 +1222,7 @@ dependencies = [
 
 [[package]]
 name = "scodok"
-version = "0.0.0"
+version = "0.1.0"
 dependencies = [
  "anyhow",
  "js-sys",

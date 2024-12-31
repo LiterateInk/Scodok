@@ -16,7 +16,7 @@ let package = Package(
   targets: [
     .binaryTarget(
       name: "scodokFFI",
-      url: "https://github.com/LiterateInk/Scodok/releases/download/0.0.0/scodokFFI.xcframework.zip",
+      url: "https://github.com/LiterateInk/Scodok/releases/download/0.1.0/scodokFFI.xcframework.zip",
       checksum: ""),
     .target(
       name: "Scodok",

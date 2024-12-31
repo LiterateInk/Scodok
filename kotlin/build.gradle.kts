@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import com.vanniktech.maven.publish.SonatypeHost
 
 val libraryName = "Scodok"
-version = "0.0.0"
+version = "0.1.0"
 
 plugins {
   id("org.jetbrains.kotlin.multiplatform") version "2.0.0"

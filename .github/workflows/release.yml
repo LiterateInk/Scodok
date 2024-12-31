@@ -143,8 +143,27 @@ jobs:
           pnpm install && mentor make-js
           npm publish --provenance --access public
 
+  make-rust:
+    runs-on: ubuntu-latest
+    needs: bump-version
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: swatinem/rust-cache@v2
+        with:
+          shared-key: "cache"
+
+      - env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_TOKEN }}
+        run: |
+          cargo publish
+
   make-release:
-    needs: [make-swift, make-kotlin, make-js]
+    needs: [make-swift, make-kotlin, make-js, make-rust]
     runs-on: ubuntu-latest
 
     permissions:

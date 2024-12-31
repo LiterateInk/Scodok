@@ -2,7 +2,7 @@
   "name": "scodok",
   "version": "0.0.19",
   "description": "A simple API wrapper for ScoDoc Notes.",
-  "repository": "https://github.com/LiterateInk/ExperimentalScodok",
+  "repository": "https://github.com/LiterateInk/Scodok",
   "sideEffects": false,
   "main": "./js/index.js",
   "types": "./js/index.d.ts",

@@ -5,7 +5,7 @@
 - [x] Login with a ticket from CAS
 - [ ] Generate and login using a token (JWT)
 - [x] Profile picture as bytes (`Vec<u8>` for Rust, `Uint8Array` for JS/TS, `ByteArray` for Kotlin, ...)
-- [ ] User status (`UNKNOWN`, `STUDENT`, `STAFF`, `ADMIN`, ...)
+- [x] User status (`UNKNOWN`, `STUDENT`, `STAFF`, `ADMIN`, ...)
 - [ ] More to come...
 
 ## Documentation

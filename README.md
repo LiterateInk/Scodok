@@ -1,5 +1,13 @@
 *This library **is not** affiliated with [ScoDoc](https://scodoc.org/) or [SebL68/Scodoc_Notes](https://github.com/SebL68/Scodoc_Notes) in any way.*
 
+## Features
+
+- [x] Login with a ticket from CAS
+- [ ] Generate and login using a token (JWT)
+- [x] Profile picture as bytes (`Vec<u8>` for Rust, `Uint8Array` for JS/TS, `ByteArray` for Kotlin, ...)
+- [ ] User status (`UNKNOWN`, `STUDENT`, `STAFF`, `ADMIN`, ...)
+- [ ] More to come...
+
 ## Documentation
 
 You can find documentation with guides at [docs.literate.ink/scodok](https://docs.literate.ink/scodok).

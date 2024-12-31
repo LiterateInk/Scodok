@@ -205,14 +205,6 @@ jobs:
         with:
           name: xcframework
 
-      - name: debugging directories...
-        run:
-          echo "working directory"
-          ls -la ./
-
-          echo "target"
-          ls -la ./target
-
       - uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.version.outputs.version }}

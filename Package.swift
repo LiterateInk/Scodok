@@ -17,7 +17,7 @@ let package = Package(
     .binaryTarget(
       name: "scodokFFI",
       url: "https://github.com/LiterateInk/Scodok/releases/download/0.1.1/scodokFFI.xcframework.zip",
-      checksum: "something"),
+      checksum: "0cd99b8afb400c9023623c9b26d002ac9331bad184d1e06fd2ae270d5403be81"),
     .target(
       name: "Scodok",
       dependencies: [.target(name: "scodokFFI")],

@@ -1,3 +1,5 @@
+<img alt="Scodok: A simple API wrapper for ScoDoc Notes" src=".github/assets/banner.svg" width="100%" />
+
 *This library **is not** affiliated with [ScoDoc](https://scodoc.org/) or [SebL68/Scodoc_Notes](https://github.com/SebL68/Scodoc_Notes) in any way.*
 
 ## Features

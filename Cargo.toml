@@ -6,6 +6,7 @@ repository = "https://github.com/LiterateInk/Scodok"
 authors = ["LiterateInk <contact@literate.ink>"]
 keywords = ["scodoc", "notes", "grading", "wrapper", "api"]
 homepage = "https://docs.literate.ink/scodok"
+include = ["**/*.rs", "!src/bin/*.rs", "Cargo.toml"]
 license = "GPL-3.0-or-later"
 edition = "2021"
 
@@ -17,7 +18,7 @@ name = "scodok"
 ffi = ["uniffi"]
 
 [dependencies]
-uniffi = { git = "https://github.com/mozilla/uniffi-rs", features = [ "cli" ], optional = true }
+uniffi = { git = "https://github.com/mozilla/uniffi-rs", features = ["cli"], optional = true }
 anyhow = "1.0"
 serde = { version = "1.0", features = ["derive"] }
 fetcher = { git = "https://github.com/LiterateInk/Utilities" }
@@ -36,7 +37,7 @@ wasm = { git = "https://github.com/LiterateInk/Utilities" }
 wee_alloc = "0.4"
 
 [build-dependencies]
-uniffi = { git = "https://github.com/mozilla/uniffi-rs", features = [ "build" ], optional = true }
+uniffi = { git = "https://github.com/mozilla/uniffi-rs", features = ["build"], optional = true }
 
 [workspace]
 resolver = "2"

@@ -35,6 +35,17 @@ jobs:
 
       - run: cargo install --git https://github.com/LiterateInk/Mentor
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
+      - uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+          node-version: 20
+          registry-url: 'https://registry.npmjs.com'
+          cache-dependency-path: 'pnpm-lock.yaml'
+
       - run: mentor bump ${{ github.event.inputs.version_type }}
       - run: mentor ci-push prepare
 

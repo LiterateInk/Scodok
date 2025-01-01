@@ -753,13 +753,12 @@ checksum = "4ee93343901ab17bd981295f2cf0026d4ad018c7c31ba84549a4ddbb47a45104"
 
 [[package]]
 name = "literateink-fetcher"
-version = "0.1.2"
+version = "0.1.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b46b1834457c1fefa2fddaa7d2aafebbe9e97f57ed22219048a749bda4a1bbfa"
+checksum = "b9aefacb5b364dda3988c7f87f9ffe415a53afefca1b057a48ce7f811d91a1ed"
 dependencies = [
  "http",
  "js-sys",
- "literateink-fetcher-macros",
  "reqwest",
  "serde",
  "serde-wasm-bindgen",
@@ -770,21 +769,10 @@ dependencies = [
 ]
 
 [[package]]
-name = "literateink-fetcher-macros"
-version = "0.1.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f4973e376c1d7c59a10665aa580e77487ab109846cad01c396eb4877eaa8a541"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn",
-]
-
-[[package]]
 name = "literateink-wasm"
-version = "0.1.2"
+version = "0.1.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0da8a6c2c487512e63181d7bc8c261d5efa0c82d9ff3e5edfe9287dcc0d6f74b"
+checksum = "63ec2ab406c46754e8a2722b95731d49bda3da461e5149f51f93f13c1ec561b0"
 dependencies = [
  "convert_case",
  "proc-macro2",
@@ -1735,7 +1723,7 @@ checksum = "f6ccf251212114b54433ec949fd6a7841275f9ada20dddd2f29e9ceea4501493"
 [[package]]
 name = "uniffi"
 version = "0.28.3"
-source = "git+https://github.com/mozilla/uniffi-rs#99f3457e932b377f5038529e180e8053910f23f1"
+source = "git+https://github.com/mozilla/uniffi-rs#2baab84368850c7e8d64baed55736aae2570e9ea"
 dependencies = [
  "anyhow",
  "camino",
@@ -1750,7 +1738,7 @@ dependencies = [
 [[package]]
 name = "uniffi_bindgen"
 version = "0.28.3"
-source = "git+https://github.com/mozilla/uniffi-rs#99f3457e932b377f5038529e180e8053910f23f1"
+source = "git+https://github.com/mozilla/uniffi-rs#2baab84368850c7e8d64baed55736aae2570e9ea"
 dependencies = [
  "anyhow",
  "camino",
@@ -1772,7 +1760,7 @@ dependencies = [
 [[package]]
 name = "uniffi_build"
 version = "0.28.3"
-source = "git+https://github.com/mozilla/uniffi-rs#99f3457e932b377f5038529e180e8053910f23f1"
+source = "git+https://github.com/mozilla/uniffi-rs#2baab84368850c7e8d64baed55736aae2570e9ea"
 dependencies = [
  "anyhow",
  "camino",
@@ -1780,18 +1768,9 @@ dependencies = [
 ]
 
 [[package]]
-name = "uniffi_checksum_derive"
-version = "0.28.3"
-source = "git+https://github.com/mozilla/uniffi-rs#99f3457e932b377f5038529e180e8053910f23f1"
-dependencies = [
- "quote",
- "syn",
-]
-
-[[package]]
 name = "uniffi_core"
 version = "0.28.3"
-source = "git+https://github.com/mozilla/uniffi-rs#99f3457e932b377f5038529e180e8053910f23f1"
+source = "git+https://github.com/mozilla/uniffi-rs#2baab84368850c7e8d64baed55736aae2570e9ea"
 dependencies = [
  "anyhow",
  "bytes",
@@ -1801,9 +1780,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "uniffi_internal_macros"
+version = "0.28.3"
+source = "git+https://github.com/mozilla/uniffi-rs#2baab84368850c7e8d64baed55736aae2570e9ea"
+dependencies = [
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "uniffi_macros"
 version = "0.28.3"
-source = "git+https://github.com/mozilla/uniffi-rs#99f3457e932b377f5038529e180e8053910f23f1"
+source = "git+https://github.com/mozilla/uniffi-rs#2baab84368850c7e8d64baed55736aae2570e9ea"
 dependencies = [
  "bincode",
  "camino",
@@ -1820,18 +1808,18 @@ dependencies = [
 [[package]]
 name = "uniffi_meta"
 version = "0.28.3"
-source = "git+https://github.com/mozilla/uniffi-rs#99f3457e932b377f5038529e180e8053910f23f1"
+source = "git+https://github.com/mozilla/uniffi-rs#2baab84368850c7e8d64baed55736aae2570e9ea"
 dependencies = [
  "anyhow",
  "bytes",
  "siphasher",
- "uniffi_checksum_derive",
+ "uniffi_internal_macros",
 ]
 
 [[package]]
 name = "uniffi_udl"
 version = "0.28.3"
-source = "git+https://github.com/mozilla/uniffi-rs#99f3457e932b377f5038529e180e8053910f23f1"
+source = "git+https://github.com/mozilla/uniffi-rs#2baab84368850c7e8d64baed55736aae2570e9ea"
 dependencies = [
  "anyhow",
  "textwrap",
@@ -1975,7 +1963,7 @@ dependencies = [
 [[package]]
 name = "weedle2"
 version = "5.0.0"
-source = "git+https://github.com/mozilla/uniffi-rs#99f3457e932b377f5038529e180e8053910f23f1"
+source = "git+https://github.com/mozilla/uniffi-rs#2baab84368850c7e8d64baed55736aae2570e9ea"
 dependencies = [
  "nom",
 ]

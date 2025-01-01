@@ -41,6 +41,7 @@ pub async fn get_profile_picture_bytes (session: &Session, nip: Option<String>) 
 
   Ok(response.bytes)
 }
+
 /// # `getStatut`
 ///
 /// Get the status of a user from a ScoDoc instance
@@ -63,8 +64,17 @@ pub async fn get_user_status (session: &Session, email: String) -> Result<UserSt
     body: None,
   };
 
-  let response = fetch!(request, session.fetcher());
-  let body: definitions::UserStatusResponse = serde_json::from_str(&response.text()).unwrap();
+  #[cfg(target_arch = "wasm32")]
+  let response = fetch(request, session.fetcher()).await;
+  #[cfg(not(target_arch = "wasm32"))]
+  let response = fetch(request).await;
 
-  Ok(body.statut)
+  use definitions::UserStatusResponse;
+  let response: UserStatusResponse = serde_json::from_str(&response.text()).unwrap();
+
+  match response {
+    UserStatusResponse::Redirect(_) => Err(Error::ExpiredSession()),
+    UserStatusResponse::Error(response) => Err(Error::ServerError(response.erreur)),
+    UserStatusResponse::Data { statut } => Ok(statut)
+  }
 }

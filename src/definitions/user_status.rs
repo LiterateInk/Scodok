@@ -1,10 +1,17 @@
 use serde_repr::{Serialize_repr, Deserialize_repr};
-use serde::{Serialize, Deserialize};
+use serde::Deserialize;
 use strum_macros::Display;
+use super::{RedirectResponse, ErrorResponse};
 
-#[derive(Serialize, Deserialize)]
-pub struct UserStatusResponse {
-  pub statut: UserStatus
+#[derive(Deserialize)]
+#[serde(untagged)]
+pub enum UserStatusResponse {
+  #[allow(dead_code)]
+  Redirect(RedirectResponse),
+  Error(ErrorResponse),
+  Data {
+    statut: UserStatus
+  }
 }
 
 /// Status of a user, you can get it

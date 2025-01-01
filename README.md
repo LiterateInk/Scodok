@@ -8,6 +8,8 @@
 - [ ] Generate and login using a token (JWT)
 - [x] Profile picture as bytes (`Vec<u8>` for Rust, `Uint8Array` for JS/TS, `ByteArray` for Kotlin, ...)
 - [x] User status (`UNKNOWN`, `STUDENT`, `STAFF`, `ADMIN`, ...)
+- [ ] First authentication data (general information concerning the user and more)
+- [x] Error handling
 - [ ] More to come...
 
 ## Documentation

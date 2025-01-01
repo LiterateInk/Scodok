@@ -37,7 +37,11 @@ pub async fn get_profile_picture_bytes (session: &Session, nip: Option<String>) 
     body: None,
   };
 
-  let response = fetch!(request, session.fetcher());
+  #[cfg(target_arch = "wasm32")]
+  let response = fetch(request, session.fetcher()).await;
+
+  #[cfg(not(target_arch = "wasm32"))]
+  let response = fetch(request).await;
 
   Ok(response.bytes)
 }
@@ -66,6 +70,7 @@ pub async fn get_user_status (session: &Session, email: String) -> Result<UserSt
 
   #[cfg(target_arch = "wasm32")]
   let response = fetch(request, session.fetcher()).await;
+
   #[cfg(not(target_arch = "wasm32"))]
   let response = fetch(request).await;
 

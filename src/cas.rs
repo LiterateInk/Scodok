@@ -16,7 +16,12 @@ pub async fn get_cas_url (instance_url: &str) -> Result<String, Error> {
     body: None,
   };
 
-  let response = fetch!(request);
+  #[cfg(target_arch = "wasm32")]
+  let response = fetch(request, &fetcher).await;
+
+  #[cfg(not(target_arch = "wasm32"))]
+  let response = fetch(request).await;
+
   let headers = response.headers();
   let location = headers.get("location").ok_or(Error::InvalidRedirection())?;
 
@@ -41,7 +46,11 @@ pub async fn get_session_from_cas_ticket (instance_url: &str, ticket: &str) -> R
     body: None,
   };
 
-  let response = fetch!(request);
+  #[cfg(target_arch = "wasm32")]
+  let response = fetch(request, &fetcher).await;
+
+  #[cfg(not(target_arch = "wasm32"))]
+  let response = fetch(request).await;
 
   if response.status != 302 {
     return Err(Error::InvalidCasTicket());

@@ -16,7 +16,7 @@ pub enum UserStatusResponse {
 
 /// Status of a user, you can get it
 /// with the `get_user_status` function.
-#[derive(Serialize_repr, Deserialize_repr, PartialEq, Debug, Display)]
+#[derive(Serialize_repr, Deserialize_repr, PartialEq, Display)]
 #[repr(u8)]
 #[cfg_attr(feature = "ffi", derive(uniffi::Enum))]
 #[cfg_attr(target_arch = "wasm32", wasm::export)]

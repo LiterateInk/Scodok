@@ -11,5 +11,5 @@ pub enum Error {
   #[error("session expired, you need to authenticate again")]
   ExpiredSession(),
   #[error("server replied with an error ({0})")]
-  ServerError(String)
+  ServerError(String),
 }

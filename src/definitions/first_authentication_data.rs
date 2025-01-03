@@ -1,5 +1,5 @@
+use super::{Config, ErrorResponse, RedirectResponse, Semester, UserStatus};
 use serde::Deserialize;
-use super::{ErrorResponse, RedirectResponse, Config, UserStatus, Semester};
 
 #[derive(Deserialize)]
 #[serde(untagged)]
@@ -11,7 +11,7 @@ pub enum FirstAuthenticationDataResponse {
     config: Box<Config>,
     auth: FirstAuthenticationDataAuth,
     semestres: Vec<Semester>,
-  }
+  },
 }
 
 #[derive(Deserialize)]
@@ -19,7 +19,7 @@ pub enum FirstAuthenticationDataResponse {
 pub struct FirstAuthenticationDataAuth {
   pub session: String,
   pub name: String, // "Doe John"
-  pub statut: UserStatus
+  pub statut: UserStatus,
 }
 
 #[derive(Deserialize)]

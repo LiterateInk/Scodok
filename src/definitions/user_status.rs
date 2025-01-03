@@ -1,7 +1,7 @@
-use serde_repr::{Serialize_repr, Deserialize_repr};
+use super::{ErrorResponse, RedirectResponse};
 use serde::Deserialize;
+use serde_repr::{Deserialize_repr, Serialize_repr};
 use strum_macros::Display;
-use super::{RedirectResponse, ErrorResponse};
 
 #[derive(Deserialize)]
 #[serde(untagged)]
@@ -10,8 +10,8 @@ pub enum UserStatusResponse {
   Redirect(RedirectResponse),
   Error(ErrorResponse),
   Data {
-    statut: UserStatus
-  }
+    statut: UserStatus,
+  },
 }
 
 /// Status of a user, you can get it
@@ -30,5 +30,5 @@ pub enum UserStatus {
   /// ADMINISTRATEUR
   Admin = 30,
   /// SUPERADMINISTRATEUR
-  SuperAdmin = 40
+  SuperAdmin = 40,
 }

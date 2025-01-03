@@ -5,7 +5,7 @@ use fetcher::HeaderMap;
 pub struct Session {
   instance_url: String,
   php_sess_id: String,
-  fetcher: js_sys::Function
+  fetcher: js_sys::Function,
 }
 
 #[cfg(not(target_arch = "wasm32"))]
@@ -35,7 +35,7 @@ impl Session {
     Self {
       instance_url: instance_url.to_string(),
       php_sess_id: php_sess_id.to_string(),
-      fetcher
+      fetcher,
     }
   }
 

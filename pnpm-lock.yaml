@@ -9,22 +9,22 @@ importers:
   .:
     dependencies:
       '@literate.ink/utilities':
-        specifier: 1.0.0-12562188342.1
-        version: 1.0.0-12562188342.1
+        specifier: 1.0.0-12591990391.1
+        version: 1.0.0-12591990391.1
       '@scure/base':
         specifier: ^1.2.1
         version: 1.2.1
 
 packages:
 
-  '@literate.ink/utilities@1.0.0-12562188342.1':
-    resolution: {integrity: sha512-9GFdA/as7C8/X0wqx04Umj32rynONI3J5EPkYRMtdA668vvM8rc58UD8Mv8ZiBAigqPY5nYm2JZuryfBAwV7Bw==, tarball: https://registry.npmjs.org/@literate.ink/utilities/-/utilities-1.0.0-12562188342.1.tgz}
+  '@literate.ink/utilities@1.0.0-12591990391.1':
+    resolution: {integrity: sha512-0202BBwtkDuzi96JGsrZEazGfQsHVx5vIGipUvp0UrwVnTTORR4BOmCuUAQWyw9OCIxWcJGAZ8kwX8WiKbJTNQ==}
 
   '@scure/base@1.2.1':
-    resolution: {integrity: sha512-DGmGtC8Tt63J5GfHgfl5CuAXh96VF/LD8K9Hr/Gv0J2lAoRGlPOMpqMpMbCTOoOJMZCk2Xt+DskdDyn6dEFdzQ==, tarball: https://registry.npmjs.org/@scure/base/-/base-1.2.1.tgz}
+    resolution: {integrity: sha512-DGmGtC8Tt63J5GfHgfl5CuAXh96VF/LD8K9Hr/Gv0J2lAoRGlPOMpqMpMbCTOoOJMZCk2Xt+DskdDyn6dEFdzQ==}
 
 snapshots:
 
-  '@literate.ink/utilities@1.0.0-12562188342.1': {}
+  '@literate.ink/utilities@1.0.0-12591990391.1': {}
 
   '@scure/base@1.2.1': {}

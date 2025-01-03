@@ -8,7 +8,7 @@
 //! when the structure is simple enough and easy to read.
 
 mod response;
-pub use response::{RedirectResponse, ErrorResponse};
+pub use response::{ErrorResponse, RedirectResponse};
 
 mod user_status;
 pub use user_status::{UserStatus, UserStatusResponse};

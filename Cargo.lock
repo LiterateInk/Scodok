@@ -753,9 +753,9 @@ checksum = "4ee93343901ab17bd981295f2cf0026d4ad018c7c31ba84549a4ddbb47a45104"
 
 [[package]]
 name = "literateink-fetcher"
-version = "0.1.5"
+version = "0.1.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5f766255d917c7c63530e2d4ee112a41a2b2e0bac213f360c7652b78724cd8a6"
+checksum = "9b746e2bab65082bdf25235fb89f8ec1a784d714953da4ca44451ff3b31bc536"
 dependencies = [
  "http",
  "js-sys",
@@ -763,6 +763,7 @@ dependencies = [
  "serde",
  "serde-wasm-bindgen",
  "serde_bytes",
+ "thiserror 2.0.9",
  "url",
  "wasm-bindgen",
  "wasm-bindgen-futures",
@@ -770,9 +771,9 @@ dependencies = [
 
 [[package]]
 name = "literateink-wasm"
-version = "0.1.5"
+version = "0.1.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a311dd986d620b08345b317234e9ab623273ff4a3122cda56800351b7412084e"
+checksum = "3ed79978bd4d798406ced84ccacc42191b9a7f9082441276fe0b97ffcf2b1e5b"
 dependencies = [
  "convert_case",
  "proc-macro2",

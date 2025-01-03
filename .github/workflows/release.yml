@@ -150,8 +150,6 @@ jobs:
           registry-url: 'https://registry.npmjs.com'
           cache-dependency-path: 'pnpm-lock.yaml'
 
-      - run: npm install -g terser
-
       - env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |

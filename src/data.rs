@@ -133,6 +133,7 @@ pub async fn get_first_authentication_data(session: &Session) -> Result<String, 
       auth,
       config,
       semestres,
+      relevé,
     } => {
       // let data = format!("{} {} {:?}", auth.name, config.statut, semestres);
       Ok("hello world".into())

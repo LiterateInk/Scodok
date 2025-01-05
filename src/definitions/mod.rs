@@ -19,5 +19,8 @@ pub use semester::Semester;
 mod config;
 pub use config::Config;
 
+mod summary;
+pub use summary::{Summary, SummaryStudent};
+
 mod first_authentication_data;
 pub use first_authentication_data::FirstAuthenticationDataResponse;
